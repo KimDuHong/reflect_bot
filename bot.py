@@ -165,7 +165,7 @@ async def on_message(message):
         await message.channel.send(msg)
         print(os.system("cd .. && cd palworld-server-docker && docker-compose stop"))
 
-    elif "팔월드 서버 재시작" in msg:
+    elif "팔월드 서버 재시작" == msg:
         msg = "서버를 재시작니다."
         await message.channel.send(msg)
         print(os.system("cd .. && cd palworld-server-docker && docker-compose restart"))
