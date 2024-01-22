@@ -163,16 +163,12 @@ async def on_message(message):
     elif "팔월드 서버 종료" == msg:
         msg = "서버를 종료합니다."
         await message.channel.send(msg)
-        print(os.system("cd .. && cd palworld-server-docker"))
-        print(os.system("pwd"))
-        print(os.system("docker-compose stop"))
+        print(os.system("cd .. && cd palworld-server-docker && docker-compose start"))
 
     elif "팔월드 서버 재시작" in msg:
         msg = "서버를 재시작니다."
         await message.channel.send(msg)
-        print(os.system("cd .. && cd palworld-server-docker"))
-        print(os.system("pwd"))
-        print(os.system("docker-compose restart"))
+        print(os.system("cd .. && cd palworld-server-docker && docker-compose restart"))
 
     return
 
